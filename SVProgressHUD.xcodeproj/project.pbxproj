@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3CB14F9C1AFBCB57003C2641 /* SVRadialGradientLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CB14F9A1AFBCB57003C2641 /* SVRadialGradientLayer.h */; };
-		3CB14F9D1AFBCB57003C2641 /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB14F9B1AFBCB57003C2641 /* SVRadialGradientLayer.m */; };
-		3CB14F9E1AFBCB57003C2641 /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB14F9B1AFBCB57003C2641 /* SVRadialGradientLayer.m */; };
 		4A9D7DD11AB345540039B273 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9D7DCF1AB345540039B273 /* SVIndefiniteAnimatedView.m */; };
 		4A9D7DF11AB345DD0039B273 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F0220615C857EF0030BBEF /* SVProgressHUD.m */; };
 		4A9D7DF21AB345DD0039B273 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9D7DCF1AB345540039B273 /* SVIndefiniteAnimatedView.m */; };
@@ -19,6 +16,14 @@
 		65F0220015C857EF0030BBEF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65F021FF15C857EF0030BBEF /* Foundation.framework */; };
 		65F0220515C857EF0030BBEF /* SVProgressHUD.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 65F0220415C857EF0030BBEF /* SVProgressHUD.h */; };
 		65F0220715C857EF0030BBEF /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F0220615C857EF0030BBEF /* SVProgressHUD.m */; };
+		921C3DFB1C2F841D00A9F0F9 /* RadialGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921C3DF91C2F841D00A9F0F9 /* RadialGradientLayer.swift */; };
+		921C3DFC1C2F8C4A00A9F0F9 /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB14F9B1AFBCB57003C2641 /* SVRadialGradientLayer.m */; };
+		921C3DFD1C2F8C4A00A9F0F9 /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB14F9B1AFBCB57003C2641 /* SVRadialGradientLayer.m */; };
+		921C3DFE1C2F8C4D00A9F0F9 /* SVRadialGradientLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CB14F9A1AFBCB57003C2641 /* SVRadialGradientLayer.h */; };
+		921C3E011C2F8C7000A9F0F9 /* IndefiniteAnimatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921C3DFF1C2F8C7000A9F0F9 /* IndefiniteAnimatedView.swift */; };
+		921C3E031C2F9B7E00A9F0F9 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921C3E021C2F9B7E00A9F0F9 /* Categories.swift */; };
+		921C3E041C2F9B7E00A9F0F9 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921C3E021C2F9B7E00A9F0F9 /* Categories.swift */; };
+		921C3E091C2FAB5600A9F0F9 /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921C3E081C2FAB5600A9F0F9 /* ProgressHUD.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -47,6 +52,11 @@
 		65F0220415C857EF0030BBEF /* SVProgressHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
 		65F0220615C857EF0030BBEF /* SVProgressHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		65F0220D15C858060030BBEF /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		921C3DF81C2F841D00A9F0F9 /* SVProgressHUD-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Bridging-Header.h"; sourceTree = "<group>"; };
+		921C3DF91C2F841D00A9F0F9 /* RadialGradientLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadialGradientLayer.swift; sourceTree = "<group>"; };
+		921C3DFF1C2F8C7000A9F0F9 /* IndefiniteAnimatedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndefiniteAnimatedView.swift; sourceTree = "<group>"; };
+		921C3E021C2F9B7E00A9F0F9 /* Categories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
+		921C3E081C2FAB5600A9F0F9 /* ProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +124,7 @@
 		65F0220115C857EF0030BBEF /* SVProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
+				921C3E0A1C2FADA200A9F0F9 /* Swift */,
 				3CB14F9A1AFBCB57003C2641 /* SVRadialGradientLayer.h */,
 				3CB14F9B1AFBCB57003C2641 /* SVRadialGradientLayer.m */,
 				65F0220415C857EF0030BBEF /* SVProgressHUD.h */,
@@ -122,6 +133,7 @@
 				4A9D7DCF1AB345540039B273 /* SVIndefiniteAnimatedView.m */,
 				65F0220D15C858060030BBEF /* SVProgressHUD.bundle */,
 				65F0220215C857EF0030BBEF /* Supporting Files */,
+				921C3DF81C2F841D00A9F0F9 /* SVProgressHUD-Bridging-Header.h */,
 			);
 			path = SVProgressHUD;
 			sourceTree = "<group>";
@@ -134,6 +146,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		921C3E0A1C2FADA200A9F0F9 /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				921C3E081C2FAB5600A9F0F9 /* ProgressHUD.swift */,
+				921C3DF91C2F841D00A9F0F9 /* RadialGradientLayer.swift */,
+				921C3DFF1C2F8C7000A9F0F9 /* IndefiniteAnimatedView.swift */,
+				921C3E021C2F9B7E00A9F0F9 /* Categories.swift */,
+			);
+			name = Swift;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -142,8 +165,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A9D7DF31AB345E10039B273 /* SVProgressHUD.h in Headers */,
+				921C3DFE1C2F8C4D00A9F0F9 /* SVRadialGradientLayer.h in Headers */,
 				4A9D7DF41AB345E80039B273 /* SVIndefiniteAnimatedView.h in Headers */,
-				3CB14F9C1AFBCB57003C2641 /* SVRadialGradientLayer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,6 +214,7 @@
 		65F021F315C857EF0030BBEF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = EmbeddedSources;
 				TargetAttributes = {
@@ -233,9 +257,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				921C3E011C2F8C7000A9F0F9 /* IndefiniteAnimatedView.swift in Sources */,
 				4A9D7DF11AB345DD0039B273 /* SVProgressHUD.m in Sources */,
-				3CB14F9E1AFBCB57003C2641 /* SVRadialGradientLayer.m in Sources */,
+				921C3DFB1C2F841D00A9F0F9 /* RadialGradientLayer.swift in Sources */,
 				4A9D7DF21AB345DD0039B273 /* SVIndefiniteAnimatedView.m in Sources */,
+				921C3DFD1C2F8C4A00A9F0F9 /* SVRadialGradientLayer.m in Sources */,
+				921C3E041C2F9B7E00A9F0F9 /* Categories.swift in Sources */,
+				921C3E091C2FAB5600A9F0F9 /* ProgressHUD.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,8 +272,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				65F0220715C857EF0030BBEF /* SVProgressHUD.m in Sources */,
-				3CB14F9D1AFBCB57003C2641 /* SVRadialGradientLayer.m in Sources */,
+				921C3E031C2F9B7E00A9F0F9 /* Categories.swift in Sources */,
 				4A9D7DD11AB345540039B273 /* SVIndefiniteAnimatedView.m in Sources */,
+				921C3DFC1C2F8C4A00A9F0F9 /* SVRadialGradientLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +319,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = SVProgressHUD;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -351,6 +381,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -368,7 +399,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -388,6 +419,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
+				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -398,7 +430,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -407,24 +439,31 @@
 		65F0220B15C857EF0030BBEF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DSTROOT = /tmp/SVProgressHUD.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SVProgressHUD/SVProgressHUD-Prefix.pch";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "SVProgressHUD/SVProgressHUD-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		65F0220C15C857EF0030BBEF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DSTROOT = /tmp/SVProgressHUD.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SVProgressHUD/SVProgressHUD-Prefix.pch";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "SVProgressHUD/SVProgressHUD-Bridging-Header.h";
 			};
 			name = Release;
 		};

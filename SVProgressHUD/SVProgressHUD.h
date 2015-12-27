@@ -8,7 +8,7 @@
 #import <UIKit/UIKit.h>
 #import <AvailabilityMacros.h>
 
-#if __IPHONE_OS_VERSION_MAX_ALLOWED < 70000
+#if __IPHONE_OS_VERSION_MAX_ALLOWED < 80000
 
 #define UI_APPEARANCE_SELECTOR
 
