@@ -25,6 +25,8 @@
 		921C3E041C2F9B7E00A9F0F9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921C3E021C2F9B7E00A9F0F9 /* Extensions.swift */; };
 		921C3E091C2FAB5600A9F0F9 /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921C3E081C2FAB5600A9F0F9 /* ProgressHUD.swift */; };
 		9245163D1C30BE61007A404A /* SVProgressHud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9245163B1C30BBAE007A404A /* SVProgressHud.swift */; };
+		9245163F1C30D447007A404A /* HudOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9245163E1C30D447007A404A /* HudOptions.swift */; };
+		924516411C30DA2D007A404A /* PWHUDView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 924516401C30DA2D007A404A /* PWHUDView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -59,6 +61,8 @@
 		921C3E021C2F9B7E00A9F0F9 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		921C3E081C2FAB5600A9F0F9 /* ProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
 		9245163B1C30BBAE007A404A /* SVProgressHud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVProgressHud.swift; sourceTree = "<group>"; };
+		9245163E1C30D447007A404A /* HudOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HudOptions.swift; sourceTree = "<group>"; };
+		924516401C30DA2D007A404A /* PWHUDView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PWHUDView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +160,8 @@
 				921C3DFF1C2F8C7000A9F0F9 /* IndefiniteAnimatedView.swift */,
 				921C3E021C2F9B7E00A9F0F9 /* Extensions.swift */,
 				9245163B1C30BBAE007A404A /* SVProgressHud.swift */,
+				9245163E1C30D447007A404A /* HudOptions.swift */,
+				924516401C30DA2D007A404A /* PWHUDView.xib */,
 			);
 			name = Swift;
 			sourceTree = "<group>";
@@ -250,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A9D7DF71AB34A620039B273 /* SVProgressHUD.bundle in Resources */,
+				924516411C30DA2D007A404A /* PWHUDView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +274,7 @@
 				921C3DFD1C2F8C4A00A9F0F9 /* SVRadialGradientLayer.m in Sources */,
 				9245163D1C30BE61007A404A /* SVProgressHud.swift in Sources */,
 				921C3E041C2F9B7E00A9F0F9 /* Extensions.swift in Sources */,
+				9245163F1C30D447007A404A /* HudOptions.swift in Sources */,
 				921C3E091C2FAB5600A9F0F9 /* ProgressHUD.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

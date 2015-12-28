@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Ys-9P-pQB">
+                    <rect key="frame" x="245" y="170.5" width="111" height="260.5"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ndt-96-43j" userLabel="hudView">
+                        <rect key="frame" x="0.0" y="0.0" width="111" height="260.5"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="BkP-4a-bG2">
+                                <rect key="frame" x="30" y="30" width="51" height="200.5"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="9Tp-nT-UTv" userLabel="progress indicator">
+                                        <rect key="frame" x="0.5" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="NDJ-q0-RYH"/>
+                                            <constraint firstAttribute="height" constant="50" id="RIc-Hi-jg6"/>
+                                        </constraints>
+                                    </activityIndicatorView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Na6-4b-5IP" userLabel="indication image">
+                                        <rect key="frame" x="0.5" y="62" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="g2N-0j-lE1"/>
+                                            <constraint firstAttribute="height" constant="50" id="m1T-VT-42t"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="asdfas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xvm-dW-8Zv" userLabel="message">
+                                        <rect key="frame" x="0.0" y="124" width="51" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfU-4T-dt6">
+                                        <rect key="frame" x="0.0" y="156.5" width="51" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="kk0-U7-I4d"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Na6-4b-5IP" firstAttribute="centerX" secondItem="BkP-4a-bG2" secondAttribute="centerX" id="ITK-he-h33"/>
+                                    <constraint firstItem="9Tp-nT-UTv" firstAttribute="centerX" secondItem="BkP-4a-bG2" secondAttribute="centerX" id="Tf6-Rs-4yA"/>
+                                    <constraint firstAttribute="trailing" secondItem="qfU-4T-dt6" secondAttribute="trailing" id="gWo-mI-waS"/>
+                                    <constraint firstItem="qfU-4T-dt6" firstAttribute="leading" secondItem="BkP-4a-bG2" secondAttribute="leading" id="yrO-XF-uu3"/>
+                                    <constraint firstItem="Xvm-dW-8Zv" firstAttribute="centerX" secondItem="BkP-4a-bG2" secondAttribute="centerX" id="zTB-B8-vhp"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BkP-4a-bG2" firstAttribute="top" secondItem="ndt-96-43j" secondAttribute="top" constant="30" id="GSs-DU-iHw"/>
+                            <constraint firstAttribute="trailing" secondItem="BkP-4a-bG2" secondAttribute="trailing" constant="30" id="PBr-s4-Aek"/>
+                            <constraint firstAttribute="bottom" secondItem="BkP-4a-bG2" secondAttribute="bottom" constant="30" id="XDf-yF-2h0"/>
+                            <constraint firstItem="BkP-4a-bG2" firstAttribute="leading" secondItem="ndt-96-43j" secondAttribute="leading" constant="30" id="Zlc-E3-1P6"/>
+                        </constraints>
+                    </view>
+                    <vibrancyEffect>
+                        <blurEffect style="light"/>
+                    </vibrancyEffect>
+                </visualEffectView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="9Ys-9P-pQB" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Iu8-lA-3PP"/>
+                <constraint firstItem="9Ys-9P-pQB" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="x0W-7r-Vi8"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
