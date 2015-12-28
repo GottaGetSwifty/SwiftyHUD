@@ -21,9 +21,10 @@
 		921C3DFD1C2F8C4A00A9F0F9 /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CB14F9B1AFBCB57003C2641 /* SVRadialGradientLayer.m */; };
 		921C3DFE1C2F8C4D00A9F0F9 /* SVRadialGradientLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CB14F9A1AFBCB57003C2641 /* SVRadialGradientLayer.h */; };
 		921C3E011C2F8C7000A9F0F9 /* IndefiniteAnimatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921C3DFF1C2F8C7000A9F0F9 /* IndefiniteAnimatedView.swift */; };
-		921C3E031C2F9B7E00A9F0F9 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921C3E021C2F9B7E00A9F0F9 /* Categories.swift */; };
-		921C3E041C2F9B7E00A9F0F9 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921C3E021C2F9B7E00A9F0F9 /* Categories.swift */; };
+		921C3E031C2F9B7E00A9F0F9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921C3E021C2F9B7E00A9F0F9 /* Extensions.swift */; };
+		921C3E041C2F9B7E00A9F0F9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921C3E021C2F9B7E00A9F0F9 /* Extensions.swift */; };
 		921C3E091C2FAB5600A9F0F9 /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921C3E081C2FAB5600A9F0F9 /* ProgressHUD.swift */; };
+		9245163D1C30BE61007A404A /* SVProgressHud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9245163B1C30BBAE007A404A /* SVProgressHud.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -55,8 +56,9 @@
 		921C3DF81C2F841D00A9F0F9 /* SVProgressHUD-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Bridging-Header.h"; sourceTree = "<group>"; };
 		921C3DF91C2F841D00A9F0F9 /* RadialGradientLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadialGradientLayer.swift; sourceTree = "<group>"; };
 		921C3DFF1C2F8C7000A9F0F9 /* IndefiniteAnimatedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndefiniteAnimatedView.swift; sourceTree = "<group>"; };
-		921C3E021C2F9B7E00A9F0F9 /* Categories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
+		921C3E021C2F9B7E00A9F0F9 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		921C3E081C2FAB5600A9F0F9 /* ProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
+		9245163B1C30BBAE007A404A /* SVProgressHud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVProgressHud.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,7 +154,8 @@
 				921C3E081C2FAB5600A9F0F9 /* ProgressHUD.swift */,
 				921C3DF91C2F841D00A9F0F9 /* RadialGradientLayer.swift */,
 				921C3DFF1C2F8C7000A9F0F9 /* IndefiniteAnimatedView.swift */,
-				921C3E021C2F9B7E00A9F0F9 /* Categories.swift */,
+				921C3E021C2F9B7E00A9F0F9 /* Extensions.swift */,
+				9245163B1C30BBAE007A404A /* SVProgressHud.swift */,
 			);
 			name = Swift;
 			sourceTree = "<group>";
@@ -262,7 +265,8 @@
 				921C3DFB1C2F841D00A9F0F9 /* RadialGradientLayer.swift in Sources */,
 				4A9D7DF21AB345DD0039B273 /* SVIndefiniteAnimatedView.m in Sources */,
 				921C3DFD1C2F8C4A00A9F0F9 /* SVRadialGradientLayer.m in Sources */,
-				921C3E041C2F9B7E00A9F0F9 /* Categories.swift in Sources */,
+				9245163D1C30BE61007A404A /* SVProgressHud.swift in Sources */,
+				921C3E041C2F9B7E00A9F0F9 /* Extensions.swift in Sources */,
 				921C3E091C2FAB5600A9F0F9 /* ProgressHUD.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,7 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				65F0220715C857EF0030BBEF /* SVProgressHUD.m in Sources */,
-				921C3E031C2F9B7E00A9F0F9 /* Categories.swift in Sources */,
+				921C3E031C2F9B7E00A9F0F9 /* Extensions.swift in Sources */,
 				4A9D7DD11AB345540039B273 /* SVIndefiniteAnimatedView.m in Sources */,
 				921C3DFC1C2F8C4A00A9F0F9 /* SVRadialGradientLayer.m in Sources */,
 			);

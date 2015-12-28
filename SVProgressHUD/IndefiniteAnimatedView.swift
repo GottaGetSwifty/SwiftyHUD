@@ -25,7 +25,7 @@ class IndefiniteAnimatedView: UIView {
 		didSet {
 			if(!CGRectEqualToRect(frame, oldValue)){
 				layoutIfSuperviewExists()
-			}
+	}
 		}
 	}
 
@@ -66,6 +66,10 @@ class IndefiniteAnimatedView: UIView {
 
 	required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
+	}
+
+	override init(frame: CGRect) {
+		super.init(frame: frame)
 	}
 
 	override func willMoveToSuperview(newSuperview: UIView?) {

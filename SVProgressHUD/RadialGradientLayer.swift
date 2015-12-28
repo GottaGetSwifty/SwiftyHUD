@@ -21,6 +21,16 @@ class RadialGradientLayer: CALayer {
 		super.init()
 	}
 
+	convenience init(gradientCenter: CGPoint, frame: CGRect, needsDisplay: Bool){
+		self.init(gradientCenter: gradientCenter)
+
+		self.frame = frame
+
+		if needsDisplay {
+			setNeedsDisplay()
+		}
+	}
+
 	required init?(coder aDecoder: NSCoder) {
 		gradientCenter = CGPoint();
 		super.init(coder: aDecoder)
