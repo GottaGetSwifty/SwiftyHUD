@@ -18,7 +18,7 @@ class SVProgressHUD {
 			if (realSharedView == nil){
 				realSharedView = ProgressHUD(frame: UIScreen.mainScreen().bounds)
 			}
-			return sharedView
+			return realSharedView!
 		}
 	}
 
@@ -104,22 +104,27 @@ class SVProgressHUD {
 		show(nil)
 	}
 
-	class func show(maskType: ProgressHUDMaskType){
-		let existingMaskType = sharedView.defaultMaskType
-		setDefaultMaskType(maskType)
-		show()
-		setDefaultMaskType(existingMaskType)
-	}
-
 	class func show(status: String?){
-		showProgress(Float(ProgressHUDUndefinedProgress), status: status)
+		show(status, maskType: nil)
 	}
 
-	class func show(status: String?, maskType: ProgressHUDMaskType){
-		let existingMaskType = sharedView.defaultMaskType
-		setDefaultMaskType(maskType)
-		show(status)
-		setDefaultMaskType(existingMaskType)
+	class func show(maskType: ProgressHUDMaskType){
+		show(nil, maskType: maskType)
+	}
+
+	class func show(status: String?, maskType: ProgressHUDMaskType?){
+
+		var existingMaskType: ProgressHUDMaskType? = nil
+		if let maskType = maskType {
+			existingMaskType = sharedView.defaultMaskType
+			setDefaultMaskType(maskType)
+		}
+
+		showProgress(Float(ProgressHUDUndefinedProgress), status: status)
+
+		if let existingMaskType = existingMaskType {
+			setDefaultMaskType(existingMaskType)
+		}
 	}
 
 	class func showProgress(progress: Float){
@@ -127,22 +132,26 @@ class SVProgressHUD {
 	}
 
 	class func showProgress(progress: Float, maskType: ProgressHUDMaskType){
-
-		let existingMaskType = sharedView.defaultMaskType
-		setDefaultMaskType(maskType)
-		showProgress(progress)
-		setDefaultMaskType(existingMaskType)
+		showProgress(progress, status: nil, maskType: maskType)
 	}
 
 	class func showProgress(progress: Float, status: String?){
-		sharedView.showProgress(progress, status: status)
+		showProgress(progress, status: status, maskType: nil)
 	}
 
-	class func showProgress(progress: Float, status: String, maskType: ProgressHUDMaskType){
-		let existingMaskType = sharedView.defaultMaskType
-		setDefaultMaskType(maskType)
-		showProgress(progress, status: status)
-		setDefaultMaskType(existingMaskType)
+	class func showProgress(progress: Float, status: String?, maskType: ProgressHUDMaskType?){
+
+		var existingMaskType: ProgressHUDMaskType? = nil
+		if let maskType = maskType {
+			existingMaskType = sharedView.defaultMaskType
+			setDefaultMaskType(maskType)
+		}
+
+		sharedView.showProgress(progress, status: status)
+
+		if let existingMaskType = existingMaskType {
+			setDefaultMaskType(existingMaskType)
+		}
 	}
 
 	class func showInfo(status: String){
@@ -179,15 +188,22 @@ class SVProgressHUD {
 }
 
 	class func showImage(image: UIImage, status: String){
-		let displayInterval = displayDuration(status)
-		sharedView.showImage(image, status: status, duration: displayInterval)
+		showImage(image, status: status, maskType: nil)
 	}
 
-	class func showImage(image: UIImage, status: String, maskType: ProgressHUDMaskType){
-		let existingMaskType = sharedView.defaultMaskType
-		setDefaultMaskType(maskType)
-		showImage(image, status: status)
-		setDefaultMaskType(existingMaskType)
+	class func showImage(image: UIImage, status: String, maskType: ProgressHUDMaskType?){
+		var existingMaskType: ProgressHUDMaskType? = nil
+		if let maskType = maskType {
+			existingMaskType = sharedView.defaultMaskType
+			setDefaultMaskType(maskType)
+		}
+
+		let displayInterval = displayDuration(status)
+		sharedView.showImage(image, status: status, duration: displayInterval)
+
+		if let existingMaskType = existingMaskType{
+			setDefaultMaskType(existingMaskType)
+		}
 	}
 
 	class func popActivity(){
@@ -208,10 +224,6 @@ class SVProgressHUD {
 	class func dismiss(){
 		dismiss(0)
 	}
-
-
-
-
 
 	class func isVisible() -> Bool{
 		return Float(sharedView.alpha) > Float(0.99)

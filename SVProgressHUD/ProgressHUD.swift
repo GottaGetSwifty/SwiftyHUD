@@ -237,9 +237,6 @@ class ProgressHUD: UIView {
 		set{ realBackgroundRingLayer = newValue }
 	}
 
-
-
-
 	override init(frame: CGRect) {
 		super.init(frame: frame)
 		backgroundColor = UIColor.whiteColor()
@@ -274,6 +271,7 @@ class ProgressHUD: UIView {
 	}
 	
 	func updateHUDFrame() {
+
 		var hudWidth = 100.0
 		var hudHeight = 100.0
 		let stringHeightBuffer = 20.0
@@ -380,7 +378,6 @@ class ProgressHUD: UIView {
 
 		}
 	}
-
 
 	func updateBlurBounds(){
 
@@ -671,6 +668,10 @@ class ProgressHUD: UIView {
 
 	}
 
+	func dismiss(){
+		dismissWithDelay(0)
+	}
+
 	func dismissWithDelay(delay: NSTimeInterval) {
 
 		let userInfo = self.getNotificationUserInfo()
@@ -699,14 +700,7 @@ class ProgressHUD: UIView {
 						NSNotificationCenter.defaultCenter().removeObserver(strongSelf)
 						strongSelf.cancelRingLayerAnimation()
 
-						self.hudView?.removeFromSuperview()
-						self.hudView = nil
-
-						self.overlayView?.removeFromSuperview()
-						self.overlayView = nil
-
-						self.indefiniteAnimatedView?.removeFromSuperview()
-						self.indefiniteAnimatedView = nil
+						self.resetViews()
 
 						UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, nil)
 						NSNotificationCenter.defaultCenter().postNotificationName(SVProgressHUDDidDisappearNotification, object: nil, userInfo: userInfo)
@@ -719,9 +713,18 @@ class ProgressHUD: UIView {
 		}
 	}
 
-	func dismiss(){
-		dismissWithDelay(0)
+	func resetViews(){
+		self.hudView?.removeFromSuperview()
+		self.hudView = nil
+
+		self.overlayView?.removeFromSuperview()
+		self.overlayView = nil
+
+		self.indefiniteAnimatedView?.removeFromSuperview()
+		self.indefiniteAnimatedView = nil
 	}
+
+
 
 	func createActivityIndicatorView() -> UIActivityIndicatorView{
 
@@ -742,9 +745,7 @@ class ProgressHUD: UIView {
 		else{
 			radius = self.ringNoTextRadius
 		}
-		animatedView.radius = radius
-		animatedView.strokeThickness = ringThickeness
-		animatedView.sizeToFit()
+		animatedView.refresh(radius, strokeThickness: ringThickeness)
 		return animatedView
 	}
 
@@ -771,14 +772,9 @@ class ProgressHUD: UIView {
 
 		let smoothedPath = UIBezierPath(arcCenter: CGPoint(x: radius, y: radius), radius: radius, startAngle: CGFloat(-M_PI_2), endAngle: CGFloat(M_PI + M_PI_2), clockwise: true)
 
-		let slice = CAShapeLayer()
-		slice.contentsScale = UIScreen.mainScreen().scale
-		slice.frame = CGRect(x: center.x - radius, y: center.y - radius, width: radius * 2, height: radius * 2)
-		slice.fillColor = UIColor.clearColor().CGColor
-		slice.lineCap = kCALineCapRound
-		slice.lineJoin = kCALineJoinBevel
-		slice.path = smoothedPath.CGPath
-		slice.strokeEnd = strokeEnd
+		let frame = CGRect(x: center.x - radius, y: center.y - radius, width: radius * 2, height: radius * 2)
+		let slice = CAShapeLayer(contentsScale: UIScreen.mainScreen().scale, frame: frame, fillColor: UIColor.clearColor().CGColor, lineCap: kCALineCapRound, lineJoin: kCALineJoinBevel, path: smoothedPath.CGPath, strokeEnd: strokeEnd)
+
 		return slice
 	}
 
@@ -797,4 +793,5 @@ class ProgressHUD: UIView {
 		}
 		return height
 	}
+	
 }

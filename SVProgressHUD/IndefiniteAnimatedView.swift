@@ -162,6 +162,12 @@ class IndefiniteAnimatedView: UIView {
 			return nil
 		}
 	}
+
+	func refresh(radius: CGFloat, strokeThickness: CGFloat){
+		self.radius = radius
+		self.strokeThickness = strokeThickness
+		self.sizeToFit()
+	}
 }
 
 

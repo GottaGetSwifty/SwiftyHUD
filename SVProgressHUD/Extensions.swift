@@ -139,6 +139,21 @@ extension UIControl {
 	}
 }
 
+extension CAShapeLayer {
+
+	convenience init(contentsScale: CGFloat, frame: CGRect, fillColor: CGColor, lineCap: String, lineJoin: String, path: CGPath, strokeEnd: CGFloat){
+
+		self.init()
+		self.contentsScale = contentsScale
+		self.frame = frame
+		self.fillColor = fillColor
+		self.lineCap = lineCap
+		self.lineJoin = lineJoin
+		self.path = path
+		self.strokeEnd = strokeEnd
+	}
+}
+
 
 
 
