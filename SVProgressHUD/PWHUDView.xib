@@ -10,83 +10,75 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Ys-9P-pQB">
-                    <rect key="frame" x="245" y="170.5" width="111" height="260.5"/>
-                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ndt-96-43j" userLabel="hudView">
-                        <rect key="frame" x="0.0" y="0.0" width="111" height="260.5"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="BkP-4a-bG2">
-                                <rect key="frame" x="30" y="30" width="51" height="200.5"/>
-                                <subviews>
-                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="9Tp-nT-UTv" userLabel="progress indicator">
-                                        <rect key="frame" x="0.5" y="0.0" width="50" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="50" id="NDJ-q0-RYH"/>
-                                            <constraint firstAttribute="height" constant="50" id="RIc-Hi-jg6"/>
-                                        </constraints>
-                                    </activityIndicatorView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Na6-4b-5IP" userLabel="indication image">
-                                        <rect key="frame" x="0.5" y="62" width="50" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="50" id="g2N-0j-lE1"/>
-                                            <constraint firstAttribute="height" constant="50" id="m1T-VT-42t"/>
-                                        </constraints>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="asdfas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xvm-dW-8Zv" userLabel="message">
-                                        <rect key="frame" x="0.0" y="124" width="51" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfU-4T-dt6">
-                                        <rect key="frame" x="0.0" y="156.5" width="51" height="44"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="kk0-U7-I4d"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <connections>
-                                            <action selector="cancelButtonPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="CTB-2J-Hs0"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="Na6-4b-5IP" firstAttribute="centerX" secondItem="BkP-4a-bG2" secondAttribute="centerX" id="ITK-he-h33"/>
-                                    <constraint firstItem="9Tp-nT-UTv" firstAttribute="centerX" secondItem="BkP-4a-bG2" secondAttribute="centerX" id="Tf6-Rs-4yA"/>
-                                    <constraint firstAttribute="trailing" secondItem="qfU-4T-dt6" secondAttribute="trailing" id="gWo-mI-waS"/>
-                                    <constraint firstItem="qfU-4T-dt6" firstAttribute="leading" secondItem="BkP-4a-bG2" secondAttribute="leading" id="yrO-XF-uu3"/>
-                                    <constraint firstItem="Xvm-dW-8Zv" firstAttribute="centerX" secondItem="BkP-4a-bG2" secondAttribute="centerX" id="zTB-B8-vhp"/>
-                                </constraints>
-                            </stackView>
-                        </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="BkP-4a-bG2" firstAttribute="top" secondItem="ndt-96-43j" secondAttribute="top" constant="30" id="GSs-DU-iHw"/>
-                            <constraint firstAttribute="trailing" secondItem="BkP-4a-bG2" secondAttribute="trailing" constant="30" id="PBr-s4-Aek"/>
-                            <constraint firstAttribute="bottom" secondItem="BkP-4a-bG2" secondAttribute="bottom" constant="30" id="XDf-yF-2h0"/>
-                            <constraint firstItem="BkP-4a-bG2" firstAttribute="leading" secondItem="ndt-96-43j" secondAttribute="leading" constant="30" id="Zlc-E3-1P6"/>
-                        </constraints>
-                    </view>
-                    <vibrancyEffect>
-                        <blurEffect style="light"/>
-                    </vibrancyEffect>
-                </visualEffectView>
+                <view opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="Wa7-fQ-h7O" userLabel="hudView">
+                    <rect key="frame" x="236.5" y="170" width="126.5" height="260.5"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="vHw-aK-xDM">
+                            <rect key="frame" x="30" y="30" width="66.5" height="200.5"/>
+                            <subviews>
+                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="rGd-Ac-gbV" userLabel="progress indicator">
+                                    <rect key="frame" x="8.5" y="0.0" width="50" height="50"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="50" id="DNr-as-diA"/>
+                                        <constraint firstAttribute="height" constant="50" id="J6Y-Jr-pfw"/>
+                                    </constraints>
+                                </activityIndicatorView>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5QV-L9-tNc" userLabel="indication image">
+                                    <rect key="frame" x="8.5" y="62" width="50" height="50"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="Qui-gF-Wa7"/>
+                                        <constraint firstAttribute="width" constant="50" id="rBD-Vw-gpm"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="asdfasdf" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kaS-YB-eIT" userLabel="message">
+                                    <rect key="frame" x="0.0" y="124" width="66.5" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="msM-l7-MK7">
+                                    <rect key="frame" x="0.0" y="156.5" width="66.5" height="44"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="JOy-AZ-Un6"/>
+                                    </constraints>
+                                    <state key="normal" title="Button"/>
+                                    <connections>
+                                        <action selector="cancelButtonPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="9za-np-hUj"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="5QV-L9-tNc" firstAttribute="centerX" secondItem="vHw-aK-xDM" secondAttribute="centerX" id="2PQ-mH-nHz"/>
+                                <constraint firstItem="rGd-Ac-gbV" firstAttribute="centerX" secondItem="vHw-aK-xDM" secondAttribute="centerX" id="9XE-xa-c3s"/>
+                                <constraint firstAttribute="trailing" secondItem="msM-l7-MK7" secondAttribute="trailing" id="B2U-T0-S5p"/>
+                                <constraint firstItem="msM-l7-MK7" firstAttribute="leading" secondItem="vHw-aK-xDM" secondAttribute="leading" id="Pub-YF-WEN"/>
+                                <constraint firstItem="kaS-YB-eIT" firstAttribute="centerX" secondItem="vHw-aK-xDM" secondAttribute="centerX" id="wH8-ab-CHh"/>
+                            </constraints>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="9XE-xa-c3s"/>
+                                    <exclude reference="2PQ-mH-nHz"/>
+                                </mask>
+                            </variation>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="vHw-aK-xDM" secondAttribute="bottom" constant="30" id="9LA-W1-XVd"/>
+                        <constraint firstAttribute="trailing" secondItem="vHw-aK-xDM" secondAttribute="trailing" constant="30" id="9pD-gd-kcG"/>
+                        <constraint firstItem="vHw-aK-xDM" firstAttribute="centerY" secondItem="Wa7-fQ-h7O" secondAttribute="centerY" id="Lgy-CK-qqa"/>
+                        <constraint firstItem="vHw-aK-xDM" firstAttribute="leading" secondItem="Wa7-fQ-h7O" secondAttribute="leading" constant="30" id="OVU-L2-Dtr"/>
+                        <constraint firstItem="vHw-aK-xDM" firstAttribute="centerX" secondItem="Wa7-fQ-h7O" secondAttribute="centerX" id="oPa-hY-8Rp"/>
+                        <constraint firstItem="vHw-aK-xDM" firstAttribute="top" secondItem="Wa7-fQ-h7O" secondAttribute="top" constant="30" id="w81-aA-SKg"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="9Ys-9P-pQB" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Iu8-lA-3PP"/>
-                <constraint firstItem="9Ys-9P-pQB" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="x0W-7r-Vi8"/>
+                <constraint firstItem="Wa7-fQ-h7O" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="e1y-o7-Wer"/>
+                <constraint firstItem="Wa7-fQ-h7O" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="uL3-WS-YaR"/>
             </constraints>
-            <connections>
-                <outlet property="blurVisualEffectView" destination="9Ys-9P-pQB" id="fCx-89-bGW"/>
-                <outlet property="cancelButton" destination="qfU-4T-dt6" id="0bA-Dr-Bm4"/>
-                <outlet property="indicationImage" destination="Na6-4b-5IP" id="oVn-TS-MIf"/>
-                <outlet property="mainHudView" destination="ndt-96-43j" id="Yi6-qs-7FZ"/>
-                <outlet property="messageLabel" destination="Xvm-dW-8Zv" id="Smu-eq-EXL"/>
-                <outlet property="progressIndicator" destination="9Tp-nT-UTv" id="jK1-U3-sES"/>
-                <outlet property="stackView" destination="BkP-4a-bG2" id="iWi-Np-J7m"/>
-            </connections>
         </view>
     </objects>
 </document>

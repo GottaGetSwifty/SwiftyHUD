@@ -10,7 +10,7 @@ import UIKit
 
 class PWHUDView: UIView {
 
-	@IBOutlet weak var blurVisualEffectView: UIVisualEffectView!
+	var blurVisualEffectView: UIVisualEffectView?
 
 	@IBOutlet weak var mainHudView: UIView!
 
@@ -24,24 +24,47 @@ class PWHUDView: UIView {
 
 	@IBOutlet weak var cancelButton: UIButton!
 
-
 	var hudOptions: HudOptions;
-
-
-
-
-
-	@IBAction func cancelButtonPressed(sender: AnyObject) {}
-
-
-
 
 	func setupForState(state: HudOptions){
 
 	}
 
 	func setupForBlurEffect(){
-		blurVisualEffectView
+
+		var effectsView = getBlurEffect(true, blurStyle: hudOptions.hudStyle.getBlurEffect)
+
+		if let blurVisualEffectView = blurVisualEffectView {
+			blurVisualEffectView.removeFromSuperView()
+		}
+
+		blurVisualEffectView = effectsView
+		self.addSubView(effectsView)
+	}
+
+	func setupProgressIndicator(){
+
+	}
+
+	func setupIndicationImage() {
+
+	}
+	
+	func setupMessageLabel(){
+
+	}
+
+	func setupCancelButton(){
+
+	}
+
+	func setupVisibilities(){
+
+	}
+
+
+	@IBAction func cancelButtonPressed(sender: AnyObject) {
+
 	}
 }
 

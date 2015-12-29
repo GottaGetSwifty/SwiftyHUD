@@ -24,6 +24,8 @@
 		921C3E031C2F9B7E00A9F0F9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921C3E021C2F9B7E00A9F0F9 /* Extensions.swift */; };
 		921C3E041C2F9B7E00A9F0F9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921C3E021C2F9B7E00A9F0F9 /* Extensions.swift */; };
 		921C3E091C2FAB5600A9F0F9 /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921C3E081C2FAB5600A9F0F9 /* ProgressHUD.swift */; };
+		923FD4271C325C5700636F52 /* PWHUDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923FD4261C325C5700636F52 /* PWHUDView.swift */; };
+		923FD4291C32605400636F52 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923FD4281C32605400636F52 /* Enums.swift */; };
 		9245163D1C30BE61007A404A /* SVProgressHud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9245163B1C30BBAE007A404A /* SVProgressHud.swift */; };
 		9245163F1C30D447007A404A /* HudOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9245163E1C30D447007A404A /* HudOptions.swift */; };
 		924516411C30DA2D007A404A /* PWHUDView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 924516401C30DA2D007A404A /* PWHUDView.xib */; };
@@ -60,6 +62,8 @@
 		921C3DFF1C2F8C7000A9F0F9 /* IndefiniteAnimatedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndefiniteAnimatedView.swift; sourceTree = "<group>"; };
 		921C3E021C2F9B7E00A9F0F9 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		921C3E081C2FAB5600A9F0F9 /* ProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
+		923FD4261C325C5700636F52 /* PWHUDView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PWHUDView.swift; sourceTree = "<group>"; };
+		923FD4281C32605400636F52 /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		9245163B1C30BBAE007A404A /* SVProgressHud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVProgressHud.swift; sourceTree = "<group>"; };
 		9245163E1C30D447007A404A /* HudOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HudOptions.swift; sourceTree = "<group>"; };
 		924516401C30DA2D007A404A /* PWHUDView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PWHUDView.xib; sourceTree = "<group>"; };
@@ -158,10 +162,12 @@
 				921C3E081C2FAB5600A9F0F9 /* ProgressHUD.swift */,
 				921C3DF91C2F841D00A9F0F9 /* RadialGradientLayer.swift */,
 				921C3DFF1C2F8C7000A9F0F9 /* IndefiniteAnimatedView.swift */,
-				921C3E021C2F9B7E00A9F0F9 /* Extensions.swift */,
 				9245163B1C30BBAE007A404A /* SVProgressHud.swift */,
+				921C3E021C2F9B7E00A9F0F9 /* Extensions.swift */,
 				9245163E1C30D447007A404A /* HudOptions.swift */,
+				923FD4261C325C5700636F52 /* PWHUDView.swift */,
 				924516401C30DA2D007A404A /* PWHUDView.xib */,
+				923FD4281C32605400636F52 /* Enums.swift */,
 			);
 			name = Swift;
 			sourceTree = "<group>";
@@ -286,6 +292,8 @@
 				65F0220715C857EF0030BBEF /* SVProgressHUD.m in Sources */,
 				921C3E031C2F9B7E00A9F0F9 /* Extensions.swift in Sources */,
 				4A9D7DD11AB345540039B273 /* SVIndefiniteAnimatedView.m in Sources */,
+				923FD4271C325C5700636F52 /* PWHUDView.swift in Sources */,
+				923FD4291C32605400636F52 /* Enums.swift in Sources */,
 				921C3DFC1C2F8C4A00A9F0F9 /* SVRadialGradientLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,7 +333,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				INFOPLIST_FILE = "SVProgressHUD-Framework/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -369,7 +377,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				INFOPLIST_FILE = "SVProgressHUD-Framework/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.transitapp.$(PRODUCT_NAME:rfc1034identifier)";
@@ -414,7 +422,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -445,7 +453,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};

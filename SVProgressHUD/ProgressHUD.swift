@@ -8,18 +8,6 @@
 
 import UIKit
 
-enum ProgressHUDStyle {
-	case Light, Dark, Custom
-}
-
-enum ProgressHUDMaskType {
-	case None, Clear, Black, Gradient
-}
-
-enum ProgressHUDAnimationType {
-	case Flat, Native
-}
-
 let ProgressHUDDidReceiveTouchEventNotification = "ProgressHUDDidReceiveTouchEventNotification";
 let ProgressHUDDidTouchDownInsideNotification = "ProgressHUDDidTouchDownInsideNotification";
 let ProgressHUDWillDisappearNotification = "ProgressHUDWillDisappearNotification";

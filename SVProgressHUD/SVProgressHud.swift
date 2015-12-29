@@ -13,49 +13,49 @@ import Foundation
 class SVProgressHUD {
 
 	private static var realSharedView: ProgressHUD?
-	private static var sharedView: ProgressHUD {
+	private static var sharedView: ProgressHUD? {
 		get{
 			if (realSharedView == nil){
 				realSharedView = ProgressHUD(frame: UIScreen.mainScreen().bounds)
 			}
-			return realSharedView??
+			return realSharedView
 		}
 	}
 
 	class func setStatus(status: String){
-		sharedView.setStatus(status)
+		sharedView!.setStatus(status)
 	}
 
 	class func setDefaultStyle(style: ProgressHUDStyle){
-		sharedView.defaultStyle = style
+		sharedView!.defaultStyle = style
 	}
 
 	class func setDefaultMaskType(maskType: ProgressHUDMaskType) {
-		sharedView.defaultMaskType = maskType
+		sharedView!.defaultMaskType = maskType
 	}
 
 	class func setDefaultAnimationType(type: ProgressHUDAnimationType) {
-		sharedView.defaultAnimationType = type
+		sharedView!.defaultAnimationType = type
 	}
 
 	class func setMinimumSize(minimumSize: CGSize) {
-		sharedView.minimumSize = minimumSize
+		sharedView!.minimumSize = minimumSize
 	}
 
 	class func setRingThickness(ringThickness: CGFloat) {
-		sharedView.ringThickeness = ringThickness
+		sharedView!.ringThickeness = ringThickness
 	}
 
 	class func setRingRadius(radius: CGFloat) {
-		sharedView.ringRadius = radius
+		sharedView!.ringRadius = radius
 	}
 
 	class func setRingNoTextRadius(radius: CGFloat) {
-		sharedView.ringNoTextRadius = radius
+		sharedView!.ringNoTextRadius = radius
 	}
 
 	class func setCornerRadius(cornerRadius: CGFloat) {
-		sharedView.cornerRadius = cornerRadius
+		sharedView!.cornerRadius = cornerRadius
 	}
 
 	class func setDefaultMaskType(type: SVProgressHUDAnimationType) {
@@ -63,36 +63,36 @@ class SVProgressHUD {
 	}
 
 	class func setFont(font: UIFont) {
-		sharedView.font = font
+		sharedView!.font = font
 	}
 
 	class func setForegroundColor(color: UIColor) {
-		sharedView.foregroundColor = color
+		sharedView!.foregroundColor = color
 	}
 
 	class func setBackgroundColor(color: UIColor) {
-		sharedView.backgroundColor = color
+		sharedView!.backgroundColor = color
 	}
 
 	class func setInfoImage(image: UIImage) {
-		sharedView.infoImage = image
+		sharedView!.infoImage = image
 	}
 
 	class func setSuccessImage(image: UIImage) {
-		sharedView.successImage = image
+		sharedView!.successImage = image
 	}
 	class func setErrorImage(image: UIImage) {
-		sharedView.errorImage = image
+		sharedView!.errorImage = image
 	}
 	class func setViewForExtension(view: UIView) {
-		sharedView.viewForExtension = view
+		sharedView!.viewForExtension = view
 	}
 	class func setMinimumDismissTimeInterval(interval: NSTimeInterval) {
-		sharedView.minimumDismissTimeInterval = interval
+		sharedView!.minimumDismissTimeInterval = interval
 	}
 
 	class func setOffsetFromCenter(offset: UIOffset){
-		sharedView.offsetFromCenter = offset
+		sharedView!.offsetFromCenter = offset
 	}
 
 	class func resetOffsetFromCenter(){
@@ -116,7 +116,7 @@ class SVProgressHUD {
 
 		var existingMaskType: ProgressHUDMaskType? = nil
 		if let maskType = maskType {
-			existingMaskType = sharedView.defaultMaskType
+			existingMaskType = sharedView!.defaultMaskType
 			setDefaultMaskType(maskType)
 		}
 
@@ -143,11 +143,11 @@ class SVProgressHUD {
 
 		var existingMaskType: ProgressHUDMaskType? = nil
 		if let maskType = maskType {
-			existingMaskType = sharedView.defaultMaskType
+			existingMaskType = sharedView!.defaultMaskType
 			setDefaultMaskType(maskType)
 		}
 
-		sharedView.showProgress(progress, status: status)
+		sharedView!.showProgress(progress, status: status)
 
 		if let existingMaskType = existingMaskType {
 			setDefaultMaskType(existingMaskType)
@@ -155,33 +155,33 @@ class SVProgressHUD {
 	}
 
 	class func showInfo(status: String){
-		showImage(sharedView.infoImage, status: status)
+		showImage(sharedView!.infoImage, status: status)
 	}
 
 	class func showInfo(status: String, maskType: ProgressHUDMaskType){
-		let defaultMaskType = sharedView.defaultMaskType
+		let defaultMaskType = sharedView!.defaultMaskType
 		setDefaultMaskType(maskType)
 		showInfo(status)
 		setDefaultMaskType(defaultMaskType)
 	}
 
 	class func showSuccess(status: String){
-		showImage(sharedView.successImage, status: status)
+		showImage(sharedView!.successImage, status: status)
 	}
 
 	class func showSuccess(status: String, maskType: ProgressHUDMaskType){
-		let existingMaskType = sharedView.defaultMaskType
+		let existingMaskType = sharedView!.defaultMaskType
 		setDefaultMaskType(maskType)
 		showSuccess(status)
 		setDefaultMaskType(existingMaskType)
 	}
 
 	class func showError(status: String){
-		showImage(sharedView.errorImage, status: status)
+		showImage(sharedView!.errorImage, status: status)
 	}
 
 	class func showError(status: String, maskType: ProgressHUDMaskType){
-		let existingMaskType = sharedView.defaultMaskType
+		let existingMaskType = sharedView!.defaultMaskType
 		setDefaultMaskType(maskType)
 		showError(status)
 		setDefaultMaskType(existingMaskType)
@@ -194,12 +194,12 @@ class SVProgressHUD {
 	class func showImage(image: UIImage, status: String, maskType: ProgressHUDMaskType?){
 		var existingMaskType: ProgressHUDMaskType? = nil
 		if let maskType = maskType {
-			existingMaskType = sharedView.defaultMaskType
+			existingMaskType = sharedView!.defaultMaskType
 			setDefaultMaskType(maskType)
 		}
 
 		let displayInterval = displayDuration(status)
-		sharedView.showImage(image, status: status, duration: displayInterval)
+		sharedView!.showImage(image, status: status, duration: displayInterval)
 
 		if let existingMaskType = existingMaskType{
 			setDefaultMaskType(existingMaskType)
@@ -207,17 +207,17 @@ class SVProgressHUD {
 	}
 
 	class func popActivity(){
-		if(sharedView.activityCount > 0){
-			sharedView.activityCount -= 1
+		if(sharedView!.activityCount > 0){
+			sharedView!.activityCount -= 1
 		}
-		if(sharedView.activityCount == 0){
-			sharedView.dismiss()
+		if(sharedView!.activityCount == 0){
+			sharedView!.dismiss()
 		}
 	}
 
 	class func dismiss(delay: NSTimeInterval){
 		if(isVisible()){
-			sharedView.dismissWithDelay(delay)
+			sharedView!.dismissWithDelay(delay)
 		}
 	}
 
@@ -226,11 +226,11 @@ class SVProgressHUD {
 	}
 
 	class func isVisible() -> Bool{
-		return Float(sharedView.alpha) > Float(0.99)
+		return Float(sharedView!.alpha) > Float(0.99)
 	}
 
 	class func displayDuration(text: String) -> NSTimeInterval{
-		let durations: [Double] = [Double(text.characters.count) * 0.06 + 0.5, sharedView.minimumDismissTimeInterval]
+		let durations: [Double] = [Double(text.characters.count) * 0.06 + 0.5, sharedView!.minimumDismissTimeInterval]
 		if let duration = durations.minElement() {
 			return duration
 		}
