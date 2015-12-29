@@ -10,6 +10,8 @@ struct HudOptions {
 
 	var hudStyle: ProgressHUDStyle = .Light
 	var hudMaskType: ProgressHUDMaskType = .None
-	var hudAnimationType:ProgressHUDAnimationType = .Native
-	
+	var hudAnimationType: ProgressHUDAnimationType = .Native
+	var message: String?
+	var buttonMessage: String?
+
 }

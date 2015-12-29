@@ -18,7 +18,7 @@ class SVProgressHUD {
 			if (realSharedView == nil){
 				realSharedView = ProgressHUD(frame: UIScreen.mainScreen().bounds)
 			}
-			return realSharedView!
+			return realSharedView??
 		}
 	}
 
