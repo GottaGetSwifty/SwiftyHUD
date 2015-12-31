@@ -49,7 +49,7 @@ class PWHUDView: UIView {
 	func setupIndicationImage() {
 
 	}
-	
+
 	func setupMessageLabel(){
 
 	}

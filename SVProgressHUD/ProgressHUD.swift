@@ -512,7 +512,6 @@ class ProgressHUD: UIView {
 
 		if let view = overlayView?.superview {
 			view.bringSubviewToFront(overlayView!)
-
 		}
 		else{
 
