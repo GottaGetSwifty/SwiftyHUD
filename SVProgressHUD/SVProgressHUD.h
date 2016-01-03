@@ -60,7 +60,7 @@ typedef NS_ENUM(NSUInteger, SVProgressHUDAnimationType) {
 @property (strong, nonatomic) UIImage *successImage UI_APPEARANCE_SELECTOR;     // default is the bundled success image provided by Freepik
 @property (strong, nonatomic) UIImage *errorImage UI_APPEARANCE_SELECTOR;       // default is the bundled error image provided by Freepik
 @property (strong, nonatomic) UIView *viewForExtension UI_APPEARANCE_SELECTOR;  // default is nil, only used if #define SV_APP_EXTENSIONS is set
-@property (assign, nonatomic) NSTimeInterval minimumDismissTimeInterval;        // default is 5.0 seconds
+@property (assign, nonatomic) NSTimeInterval minimumDismissTimeInterval;        // defaul t is 5.0 seconds
 
 @property (assign, nonatomic) UIOffset offsetFromCenter UI_APPEARANCE_SELECTOR; // default is 0, 0
 

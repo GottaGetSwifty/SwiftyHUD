@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PWHUDView: UIView {
+class SwiftyHUDView: UIView {
 
 	@IBOutlet weak var blurVisualEffectView: UIVisualEffectView!
 
@@ -29,18 +29,28 @@ class PWHUDView: UIView {
 	override init(frame: CGRect) {
 		self.hudOptions = HudOptions()
 		super.init(frame: frame)
+		self.hidden = true
+	}
+
+	convenience init(frame: CGRect, hudOptions: HudOptions){
+
+		self.init(frame: frame)
+		self.hudOptions = hudOptions
+		update()
 	}
 
 	required init?(coder aDecoder: NSCoder) {
 		self.hudOptions = HudOptions()
 	    super.init(coder: aDecoder)
+		self.hidden = true
 	}
 
-	func setupForState(state: HudOptions){
+	func setupForOptions(options: HudOptions){
+		self.hudOptions = options
 		update()
 	}
 
-	func update(){
+	private func update(){
 		setupForBlurEffect()
 		setupProgressIndicator()
 		setupIndicationImage()
@@ -50,7 +60,7 @@ class PWHUDView: UIView {
 		mainHudView.layer.cornerRadius = 25
 	}
 
-	func setupForBlurEffect(){
+	private func setupForBlurEffect(){
 
 		if let blurStyle = hudOptions.hudStyle.getBlurStyle() {
 
@@ -65,7 +75,7 @@ class PWHUDView: UIView {
 		}
 	}
 
-	func setupProgressIndicator(){
+	private func setupProgressIndicator(){
 
 		if( hudOptions.hudAnimationType == .Native) {
 			progressIndicator.startAnimating()
@@ -83,7 +93,7 @@ class PWHUDView: UIView {
 		}
 	}
 
-	func setupIndicationImage() {
+	private func setupIndicationImage() {
 
 		if let image = hudOptions.statusImageOption.getImage() {
 			indicationImage.image = image
@@ -98,7 +108,7 @@ class PWHUDView: UIView {
 		}
 	}
 
-	func setupMessageLabel(){
+	private func setupMessageLabel(){
 		if let labelText = hudOptions.message {
 			messageLabel.text = labelText
 			messageLabel.hidden = true
@@ -115,7 +125,7 @@ class PWHUDView: UIView {
 		}
 	}
 
-	func setupCancelButton(){
+	private func setupCancelButton(){
 
 		if let buttonText = hudOptions.buttonMessage {
 			cancelButton.titleLabel?.text = buttonText
@@ -126,8 +136,21 @@ class PWHUDView: UIView {
 		}
 	}
 
-	func setupBackground(){
+	private func setupBackground(){
 		hudOptions.hudMaskType.maskLayer(self.layer)
+	}
+
+	func show(){
+		show(0.4, delay: 0)
+	}
+
+	func show(duration: NSTimeInterval, delay: NSTimeInterval){
+
+		dispatch_async(dispatch_get_main_queue(), {
+			UIView.animateWithDuration(duration, delay: delay, options: .CurveEaseOut, animations: { () -> Void in
+				self.hidden = false
+				}, completion: nil)
+		})
 	}
 
 	@IBAction func cancelButtonPressed(sender: AnyObject) {
@@ -153,7 +176,9 @@ class PWHUDView: UIView {
 			superView.bringSubviewToFront(view)
 		}
 		view.update()
+		view.show()
 	}
+
 }
 
 

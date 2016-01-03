@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 47;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,11 +19,12 @@
 		920FAD531C35D23800043D16 /* HudOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920FAD4B1C35D23800043D16 /* HudOptions.swift */; };
 		920FAD541C35D23800043D16 /* IndefiniteAnimatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920FAD4C1C35D23800043D16 /* IndefiniteAnimatedView.swift */; };
 		920FAD551C35D23800043D16 /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920FAD4D1C35D23800043D16 /* ProgressHUD.swift */; };
-		920FAD561C35D23800043D16 /* PWHUDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920FAD4E1C35D23800043D16 /* PWHUDView.swift */; };
+		920FAD561C35D23800043D16 /* SwiftyHUDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920FAD4E1C35D23800043D16 /* SwiftyHUDView.swift */; };
 		920FAD571C35D23800043D16 /* RadialGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920FAD4F1C35D23800043D16 /* RadialGradientLayer.swift */; };
 		920FAD581C35D23800043D16 /* SVProgressHud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920FAD501C35D23800043D16 /* SVProgressHud.swift */; };
-		920FAD5A1C35D29600043D16 /* PWHUDView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 920FAD591C35D29600043D16 /* PWHUDView.xib */; };
+		920FAD5A1C35D29600043D16 /* SwiftyHUDView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 920FAD591C35D29600043D16 /* SwiftyHUDView.xib */; };
 		920FAD5C1C35D92700043D16 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 920FAD5B1C35D92700043D16 /* SVProgressHUD.bundle */; };
+		9274CCD31C3992120004E20C /* SwiftyHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9274CCD21C3992120004E20C /* SwiftyHUD.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,11 +63,12 @@
 		920FAD4B1C35D23800043D16 /* HudOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HudOptions.swift; sourceTree = "<group>"; };
 		920FAD4C1C35D23800043D16 /* IndefiniteAnimatedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndefiniteAnimatedView.swift; sourceTree = "<group>"; };
 		920FAD4D1C35D23800043D16 /* ProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
-		920FAD4E1C35D23800043D16 /* PWHUDView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PWHUDView.swift; sourceTree = "<group>"; };
+		920FAD4E1C35D23800043D16 /* SwiftyHUDView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyHUDView.swift; sourceTree = "<group>"; };
 		920FAD4F1C35D23800043D16 /* RadialGradientLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadialGradientLayer.swift; sourceTree = "<group>"; };
 		920FAD501C35D23800043D16 /* SVProgressHud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVProgressHud.swift; sourceTree = "<group>"; };
-		920FAD591C35D29600043D16 /* PWHUDView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PWHUDView.xib; sourceTree = "<group>"; };
+		920FAD591C35D29600043D16 /* SwiftyHUDView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SwiftyHUDView.xib; sourceTree = "<group>"; };
 		920FAD5B1C35D92700043D16 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		9274CCD21C3992120004E20C /* SwiftyHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyHUD.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,8 +158,9 @@
 				920FAD501C35D23800043D16 /* SVProgressHud.swift */,
 				920FAD4F1C35D23800043D16 /* RadialGradientLayer.swift */,
 				920FAD4B1C35D23800043D16 /* HudOptions.swift */,
-				920FAD4E1C35D23800043D16 /* PWHUDView.swift */,
-				920FAD591C35D29600043D16 /* PWHUDView.xib */,
+				920FAD4E1C35D23800043D16 /* SwiftyHUDView.swift */,
+				9274CCD21C3992120004E20C /* SwiftyHUD.swift */,
+				920FAD591C35D29600043D16 /* SwiftyHUDView.xib */,
 				920FAD5B1C35D92700043D16 /* SVProgressHUD.bundle */,
 			);
 			path = SwiftyHUDModule;
@@ -243,7 +246,7 @@
 				};
 			};
 			buildConfigurationList = 920FAD011C35D1C800043D16 /* Build configuration list for PBXProject "SwiftyHUD" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 6.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -269,7 +272,7 @@
 			files = (
 				920FAD5C1C35D92700043D16 /* SVProgressHUD.bundle in Resources */,
 				920FAD141C35D1C800043D16 /* LaunchScreen.storyboard in Resources */,
-				920FAD5A1C35D29600043D16 /* PWHUDView.xib in Resources */,
+				920FAD5A1C35D29600043D16 /* SwiftyHUDView.xib in Resources */,
 				920FAD111C35D1C800043D16 /* Assets.xcassets in Resources */,
 				920FAD0F1C35D1C800043D16 /* Main.storyboard in Resources */,
 			);
@@ -302,7 +305,8 @@
 				920FAD511C35D23800043D16 /* Enums.swift in Sources */,
 				920FAD0A1C35D1C800043D16 /* AppDelegate.swift in Sources */,
 				920FAD541C35D23800043D16 /* IndefiniteAnimatedView.swift in Sources */,
-				920FAD561C35D23800043D16 /* PWHUDView.swift in Sources */,
+				9274CCD31C3992120004E20C /* SwiftyHUD.swift in Sources */,
+				920FAD561C35D23800043D16 /* SwiftyHUDView.swift in Sources */,
 				920FAD581C35D23800043D16 /* SVProgressHud.swift in Sources */,
 				920FAD521C35D23800043D16 /* Extensions.swift in Sources */,
 				920FAD551C35D23800043D16 /* ProgressHUD.swift in Sources */,
@@ -364,6 +368,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -396,7 +401,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -409,6 +414,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -435,7 +441,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -532,6 +538,7 @@
 				920FAD301C35D1C800043D16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		920FAD311C35D1C800043D16 /* Build configuration list for PBXNativeTarget "SwiftyHUDTests" */ = {
 			isa = XCConfigurationList;
@@ -540,6 +547,7 @@
 				920FAD331C35D1C800043D16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		920FAD341C35D1C800043D16 /* Build configuration list for PBXNativeTarget "SwiftyHUDUITests" */ = {
 			isa = XCConfigurationList;
@@ -548,6 +556,7 @@
 				920FAD361C35D1C800043D16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
